@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 const About = () => {
-  // Define type-safe refs
   const imgRef = useRef<HTMLImageElement>(null);
   const pRef = useRef<HTMLParagraphElement>(null);
   const pRefOne = useRef<HTMLParagraphElement>(null);

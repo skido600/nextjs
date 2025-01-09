@@ -4,14 +4,7 @@ import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import Service_list from "./Service_list";
 
-interface Service {
-  starCount: number;
-  Tittle: string;
-  content: string;
-}
 const Service: React.FC = () => {
-  //   const { scrollYProgress } = useScroll();
-
   return (
     <>
       <motion.div
