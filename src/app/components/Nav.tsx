@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import Link from "next/link"; // Import Link from next.js
+import Link from "next/link";
 
 const Nav: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
