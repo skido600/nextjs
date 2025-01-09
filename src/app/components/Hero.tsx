@@ -33,32 +33,31 @@ const Hero: React.FC = () => {
               <p>Leonard</p>
               <p>Ebisi</p>
             </motion.div>
-            <p className="text-[#1E293B] md:text-[20px] font-[600]">
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                transition={{ duration: 0.5, delay: 0.9 }}
-              >
-                <ReactTyped
-                  strings={[
-                    "Creative Frontend Developer",
-                    "I create simple, beautiful, and easy-to-use websites.",
-                    "Feel free to explore!",
-                    "Bringing designs to life with modern technology.",
-                    "Focused on delivering exceptional user experiences.",
-                    "Transforming ideas into interactive web solutions.",
-                    "Passionate about crafting responsive designs.",
-                    "Your vision, my code!",
-                    "Let’s build something amazing together.",
-                  ]}
-                  typeSpeed={50}
-                  backSpeed={60}
-                  backDelay={1000}
-                  loop
-                />
-              </motion.div>
-            </p>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="text-[#1E293B] md:text-[20px] font-[600]"
+            >
+              <ReactTyped
+                strings={[
+                  "Creative Frontend Developer",
+                  "I create simple, beautiful, and easy-to-use websites.",
+                  "Feel free to explore!",
+                  "Bringing designs to life with modern technology.",
+                  "Focused on delivering exceptional user experiences.",
+                  "Transforming ideas into interactive web solutions.",
+                  "Passionate about crafting responsive designs.",
+                  "Your vision, my code!",
+                  "Let’s build something amazing together.",
+                ]}
+                typeSpeed={50}
+                backSpeed={60}
+                backDelay={1000}
+                loop
+              />
+            </motion.div>
             <a href="mailto:ebisileonard@gmail.com">
               <motion.div
                 initial="hidden"
@@ -82,8 +81,13 @@ const Hero: React.FC = () => {
               <span className="font-light">Nigeria</span>
             </motion.div>
           </article>
-          <div className="hidden md:block">
-            <figure>
+          <motion.div className="hidden md:block">
+            <motion.figure
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ duration: 0.5, delay: 1.6 }}
+            >
               <Image
                 src="/assets/medium-shot-anime-style-man-portrait.jpg"
                 alt="leo wave leo x"
@@ -91,8 +95,8 @@ const Hero: React.FC = () => {
                 width={600}
                 height={800}
               />
-            </figure>
-          </div>
+            </motion.figure>
+          </motion.div>
         </section>
       </main>
     </>

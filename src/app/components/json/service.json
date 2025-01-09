@@ -1,0 +1,32 @@
+[
+  {
+    "starCount": 1,
+    "Tittle": "WEB DEVELOPMENT",
+    "content": "Transforming ideas into visually stunning interfaces using React JS, CSS, and the latest tools like TailwindCSS and Bootstrap, ensuring every detail resonates with users."
+  },
+  {
+    "starCount": 2,
+    "Tittle": "RESPONSIVE DESIGN",
+    "content": "Crafting websites and applications designed to function flawlessly across all devices, ensuring optimal performance and aesthetics from desktops to smartphones."
+  },
+  {
+    "starCount": 3,
+    "Tittle": "API INTEGRATIONS",
+    "content": "Connecting intuitive frontend designs with robust backend systems and APIs to ensure real-time data flow and a smooth user experience."
+  },
+  {
+    "starCount": 4,
+    "Tittle": "VERSION CONTROL",
+    "content": "Using version control systems like Git/GitHub to collaborate with other developers and manage code changes effectively."
+  },
+  {
+    "starCount": 5,
+    "Tittle": "CONTINUOUS LEARNING",
+    "content": "Staying updated with the latest frontend technologies, trends, and best practices to deliver modern and innovative solutions."
+  },
+  {
+    "starCount": 6,
+    "Tittle": "TECHNICAL SUPPORT",
+    "content": "Providing hands-on technical support to diagnose and fix issues, ensuring seamless frontend performance."
+  }
+]
