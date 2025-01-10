@@ -23,13 +23,19 @@ const Nav: React.FC = () => {
           <div className="list text-[#7B4155]">
             <ul className="md:flex space-x-8 text-[17px] hidden">
               <li>
-                <Link href="/">HOME</Link>
+                <Link href="/" onClick={handle}>
+                  HOME
+                </Link>
               </li>
               <li>
-                <Link href="/projects">PORTFOLIO</Link>
+                <Link href="/projects" onClick={handle}>
+                  PORTFOLIO
+                </Link>
               </li>
               <li>
-                <Link href="/contact">CONTACT</Link>
+                <Link href="/contact" onClick={handle}>
+                  CONTACT
+                </Link>
               </li>
             </ul>
             {/* mobile */}
@@ -43,13 +49,19 @@ const Nav: React.FC = () => {
               </div>
               <ul className="py-14 space-y-8 px-6 text-[15px]">
                 <li className="mb-4">
-                  <Link href="/">Home</Link>
+                  <Link href="/" onClick={handle}>
+                    Home
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/projects">Portfolio</Link>
+                  <Link href="/projects" onClick={handle}>
+                    Portfolio
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/contact" onClick={handle}>
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>
