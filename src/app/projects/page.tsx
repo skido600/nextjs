@@ -36,23 +36,6 @@ const Portfolio: React.FC = () => {
 
   const projects: Project[] = [
     {
-      title: "AskAI",
-      description:
-        "An AI-powered chat application built using JavaScript, Gemini API, and Tailwind CSS, providing intelligent and responsive user interactions.",
-      img: "/projects/screencapture-aso-ai-vercel-app-2024-12-09-01_45_54.png",
-      tags: ["TailwindCSS", "JavaScript"],
-      previewLink: "https://aso-ai.vercel.app/",
-    },
-    {
-      title: "Momentum AI",
-      description:
-        "An enhanced version of AskAI, reimagined with TypeScript and React, featuring improved functionality and Firebase integration.",
-      img: "/projects/screencapture-modify-askmain-3kt4-vercel-app-2024-12-09-01_57_33.png",
-      tags: ["TypeScript", "TailwindCSS", "Firebase"],
-      previewLink: "https://modify-askmain-3kt4.vercel.app/",
-      githubLink: "https://github.com/skido600/modify_ASKMAIN.git",
-    },
-    {
       title: "Melodia",
       description:
         "A modern music web app designed with React, Firebase, and Tailwind CSS, offering seamless streaming and personalized playlists.",
@@ -60,23 +43,7 @@ const Portfolio: React.FC = () => {
       tags: ["ReactJs", "JavaScript", "TailwindCSS", "Firebase"],
       previewLink: "https://melodialeox.vercel.app/homepage/home",
     },
-    {
-      title: "Password Generator",
-      description:
-        "A user-friendly tool built with React and Tailwind CSS for generating secure and customizable passwords on demand.",
-      img: "/projects/screencapture-generator-1we10kt5j-leowaves-projects-vercel-app-2024-12-09-01_58_34.png",
-      tags: ["ReactJs", "JavaScript", "TailwindCSS"],
-      previewLink: "https://generator-xi.vercel.app/",
-      githubLink: "https://github.com/skido600/generator.git",
-    },
-    {
-      title: "Weather App",
-      description:
-        "A sleek weather application using React, Tailwind CSS, and a weather API to deliver real-time forecasts and conditions.",
-      img: "/projects/screencapture-waether-with-react-johv-vercel-app-2024-12-09-02_02_33.png",
-      tags: ["ReactJs", "JavaScript", "TailwindCSS", "Weather API"],
-      previewLink: "https://waether-with-react-johv.vercel.app/",
-    },
+
     {
       title: "Link Shortener",
       description:
@@ -84,23 +51,6 @@ const Portfolio: React.FC = () => {
       img: "/projects/screencapture-link-shortner-teal-omega-vercel-app-2024-12-09-01_58_09.png",
       tags: ["ReactJs", "JavaScript", "TailwindCSS", "TinyURL API"],
       previewLink: "https://link-shortner-teal-omega.vercel.app/",
-    },
-    {
-      title: "Landing page",
-      description:
-        "A simple and responsive landing page designed with ReactJS and styled using Tailwind CSS. It highlights a sleek UI/UX, optimized for both performance and user experience.",
-      img: "/projects/screencapture-steak-eta-vercel-app-2024-12-09-01_59_52.png",
-      tags: ["ReactJs", "TailwindCSS"],
-      previewLink: "https://steak-eta.vercel.app/",
-      githubLink: "https://github.com/skido600/steak.git",
-    },
-    {
-      title: "GPA Calculator",
-      description:
-        "A user-friendly tool designed to calculate your Grade Point Average (GPA) with ease. Built using HTML, Tailwind CSS, and JavaScript.",
-      img: "/projects/screencapture-127-0-0-1-5501-index-html-2024-12-22-23_19_06.png",
-      tags: ["HTML", "TailwindCSS", "JavaScript"],
-      previewLink: "https://gpacal-team.vercel.app/",
     },
   ];
 
@@ -112,9 +62,7 @@ const Portfolio: React.FC = () => {
         </h1>
         <div className="text-[#1E293B] mt-5">
           <ReactTyped
-            strings={[
-              "A glimpse into side projects I’ve had the pleasure of working on.",
-            ]}
+            strings={["some Project i have work on"]}
             typeSpeed={50}
             backSpeed={60}
             backDelay={1000}

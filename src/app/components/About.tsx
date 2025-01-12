@@ -40,8 +40,8 @@ const About = () => {
             ref={pRef}
             className="text-white md:text-[25px] text-[18px] font-[700] font-poppins"
           >
-            I am a Software Developer based in Nigeria, with a rich experience
-            of over 3 years in website & product development.
+            I am a Software Developer with a rich experience of over 3 years in
+            website & product development.
           </motion.p>
         </motion.div>
 
@@ -64,9 +64,7 @@ const About = () => {
               className="mb-4"
             >
               I love to work on solutions that drive progress and make a
-              tangible impact. Having a track record of initiating and leading
-              successful projects & teams; I thrive in challenging, fast-paced
-              environments.
+              tangible impact.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
