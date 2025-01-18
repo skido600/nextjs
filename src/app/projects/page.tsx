@@ -45,12 +45,13 @@ const Portfolio: React.FC = () => {
     },
 
     {
-      title: "Link Shortener",
+      title: "Momentum AI",
       description:
-        "A simple and efficient React-based tool for shortening URLs, powered by the TinyURL API and styled with Tailwind CSS.",
-      img: "/projects/screencapture-link-shortner-teal-omega-vercel-app-2024-12-09-01_58_09.png",
-      tags: ["ReactJs", "JavaScript", "TailwindCSS", "TinyURL API"],
-      previewLink: "https://link-shortner-teal-omega.vercel.app/",
+        "An enhanced version of AskAI, reimagined with TypeScript and React, featuring improved functionality and Firebase integration.",
+      img: "/projects/screencapture-modify-askmain-3kt4-vercel-app-2024-12-09-01_57_33.png",
+      tags: ["TypeScript", "TailwindCSS", "Firebase"],
+      previewLink: "https://modify-askmain-3kt4.vercel.app/",
+      githubLink: "https://github.com/skido600/modify_ASKMAIN.git",
     },
   ];
 

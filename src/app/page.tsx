@@ -5,6 +5,7 @@ import About from "./components/About";
 import Service from "./components/Service";
 import Ideal from "./components/Ideal";
 import { IoMdArrowDropupCircle } from "react-icons/io";
+import Main_skill from "./components/Main_skill";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,6 +36,7 @@ const Home = () => {
       <About />
       <Service />
       <Ideal />
+      <Main_skill />
       {isVisible && (
         <div
           onClick={scrollToTop}

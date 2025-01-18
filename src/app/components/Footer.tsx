@@ -1,6 +1,7 @@
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 const Footer: React.FC = () => {
   return (
@@ -41,6 +42,17 @@ const Footer: React.FC = () => {
                 </a>
               </div>
 
+              <div className="flex items-center space-x-2">
+                <FaWhatsapp size={20} />
+                <a
+                  href="https://wa.me/2349065849502"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2"
+                >
+                  <p className="text-[15px]">Whatsapp</p>
+                </a>
+              </div>
               <div className="flex items-center space-x-2">
                 <FaXTwitter size={20} />
                 <a
