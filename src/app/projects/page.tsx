@@ -61,6 +61,13 @@ const Portfolio: React.FC = () => {
       previewLink: "https://coffe-delta-liart.vercel.app/",
       githubLink: "https://github.com/skido600/landing_2.git",
     },
+    {
+  title: "Landing",
+  description: "This project is a fully responsive landing page built using React, TypeScript, and Tailwind CSS. The goal was to take a Figma design and transform it into a pixel-perfect, high-performance web page.",
+  tags: ["TypeScript", "TailwindCSS", "React"],
+  previewLink: "https://landingpage-umber-one.vercel.app/",
+  githubLink: "https://github.com/skido600/landingpage.git"
+    }
   ];
 
   return (
