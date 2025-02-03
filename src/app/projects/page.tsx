@@ -56,7 +56,7 @@ const Portfolio: React.FC = () => {
         {
       title: "coffee landing page",
       description:
-        "working on coffe landing page ",
+        "A coffee landing page is a one-page website designed to showcase a coffee brand, promote a specific product, or capture leads for a coffee-related business. Whether you're building a landing page for a coffee shop, an online store, or a subscription service, the goal is to create an inviting and visually appealing experience for visitors. ",
       tags: ["TypeScript", "TailwindCSS", "React"],
       previewLink: "https://coffe-delta-liart.vercel.app/",
       githubLink: "https://github.com/skido600/landing_2.git",
