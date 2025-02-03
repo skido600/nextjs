@@ -59,7 +59,7 @@ const Portfolio: React.FC = () => {
         "working on coffe landing page ",
       tags: ["TypeScript", "TailwindCSS", "React"],
       previewLink: "https://coffe-delta-liart.vercel.app/",
-      githubLink: "",
+      githubLink: "https://github.com/skido600/landing_2.git",
     },
   ];
 
