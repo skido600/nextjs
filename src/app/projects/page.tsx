@@ -49,7 +49,7 @@ const Portfolio: React.FC = () => {
       description:
         "An enhanced version of AskAI, reimagined with TypeScript and React, featuring improved functionality and Firebase integration.",
     //  img: "/projects/screencapture-modify-askmain-3kt4-vercel-app-2024-12-09-01_57_33.png",
-      tags: ["TypeScript", "TailwindCSS", "Firebase"],
+      tags: ["TypeScript", "TailwindCSS", "Gemini"],
       previewLink: "https://modify-askmain-3kt4.vercel.app/",
       githubLink: "https://github.com/skido600/modify_ASKMAIN.git",
     },
