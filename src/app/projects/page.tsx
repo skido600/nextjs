@@ -69,10 +69,10 @@ const Portfolio: React.FC = () => {
   githubLink: "https://github.com/skido600/landingpage.git"
     },
 {
-  "title": "Wait List",
-  "description": "A waitlist application built using Next.js, TypeScript, and Tailwind CSS. It integrates Firebase for data management and authentication, while Nodemailer handles email notifications efficiently.",
-  "tags": ["TypeScript", "TailwindCSS", "Nextjs", "Firebase", "Nodemailer"],
-  "previewLink": "https://waitlist-lyart-theta.vercel.app/"
+  title: "Wait List",
+  description: "A waitlist application built using Next.js, TypeScript, and Tailwind CSS. It integrates Firebase for data management and authentication, while Nodemailer handles email notifications efficiently.",
+  tags: ["TypeScript", "TailwindCSS", "Nextjs", "Firebase", "Nodemailer"],
+  previewLink: "https://waitlist-lyart-theta.vercel.app/"
 }
     
   ];
