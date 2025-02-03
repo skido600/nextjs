@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect} from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import Link from "next/link";
@@ -10,6 +10,13 @@ const Nav: React.FC = () => {
   const handle = () => {
     setToggle(!toggle);
   };
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [toggle]);
 
   return (
     <>
