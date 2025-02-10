@@ -87,6 +87,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta
+        name="google-site-verification"
+        content="u5-RBI1YVf1cKzH_rr_SNQVST8SAOxbIu1-nqBVm2dU"
+      />
       <meta name="theme-color" content="#061417" />
       <body>
         <header>
