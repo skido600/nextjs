@@ -2,12 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-// import * as motion from "motion/react-client";
+
 interface Project {
   title: string;
   img: string;
   previewLink: string;
 }
+
 function Slider() {
   const projects: Project[] = [
     {
@@ -15,7 +16,6 @@ function Slider() {
       img: "/assets/melo.png",
       previewLink: "https://melodialeox.vercel.app/",
     },
-
     {
       title: "coffee landing page",
       img: "/assets/coffe.png",
@@ -32,15 +32,13 @@ function Slider() {
       previewLink: "https://waitlist-lyart-theta.vercel.app/",
     },
   ];
+
   return (
     <>
-      <section className="px-6 md:px-[4.2rem] mt-16">
-        <h1 className="text-[#1E293B] text-[30px] font-bold">
+      <main className="overflow-x-hidden mt-16 w-full overflow-hidden">
+        <h1 className="text-[#1E293B] text-[20px] px-6 mb-4 font-bold">
           Some Projects I've Built
         </h1>
-      </section>
-
-      <main className="overflow-x-hidden- mt-16  w-full overflow-hidden ">
         <Marquee
           speed={30}
           direction="right"
@@ -49,7 +47,12 @@ function Slider() {
         >
           <article className="flex gap-3 items-center">
             {projects.map((project, index) => (
-              <div key={index} className="relative group  duration-300">
+              <div
+                key={index}
+                className={`relative group duration-300 ${
+                  index === projects.length - 1 ? "mx-5 md:mx-0" : ""
+                }`}
+              >
                 <Image
                   src={project.img}
                   alt={project.title}
@@ -58,7 +61,7 @@ function Slider() {
                   className="object-cover transform group-hover:scale-75 rounded-lg transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <div className="absolute bottom-0 left-0 p-4 right-0 text-white">
                   <h3 className="text-xl font-semibold mb-2 jost">
                     {project.title}
                   </h3>
