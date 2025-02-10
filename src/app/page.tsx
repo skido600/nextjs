@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Service from "./components/Service";
-import Ideal from "./components/Ideal";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Service from "@/components/Service";
 import { IoMdArrowDropupCircle } from "react-icons/io";
-import Main_skill from "./components/Main_skill";
+import Main_skill from "@/components/Main_skill";
+import Ideal from "@/components/Ideal";
+import Slider from "@/components/Slider";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +37,7 @@ const Home = () => {
       <About />
       <Service />
       <Ideal />
+      <Slider />
       <Main_skill />
       {isVisible && (
         <div

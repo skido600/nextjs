@@ -1,24 +1,18 @@
 "use client";
 import { useState } from "react";
-import * as Toast from "@radix-ui/react-toast";
+
 import emailjs from "emailjs-com";
-import Loader from "../components/helper/Loader";
+import { useToast } from "@/hooks/use-toast";
 import { ReactTyped } from "react-typed";
+import Loader from "@/components/helper/Loader";
 
 const Contact: React.FC = () => {
+  const { toast } = useToast();
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [toast, setToast] = useState({
-    open: false,
-    message: "",
-    status: "success",
-  });
-  const [loading, setLoading] = useState<boolean>(false);
 
-  const showToast = (message: string, status: "success" | "error") => {
-    setToast({ open: true, message, status });
-  };
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,12 +21,18 @@ const Contact: React.FC = () => {
 
     // Validation
     if (!name || !email || !message) {
-      showToast("All fields are required!", "error");
+      toast({
+        description: "All fields are required!",
+        variant: "destructive",
+      });
       return;
     }
 
     if (!emailRegex.test(email)) {
-      showToast("Please enter a valid email address!", "error");
+      toast({
+        description: "Please enter a valid email address!",
+        variant: "destructive",
+      });
       return;
     }
     setLoading(true);
@@ -50,13 +50,21 @@ const Contact: React.FC = () => {
       .then(
         (result) => {
           console.log(result.text);
-          showToast("Message sent successfully!", "success");
+
+          toast({
+            title: "Success!",
+            description: "Message sent successfully!",
+            variant: "successful",
+          });
           setEmail("");
           setMessage("");
           setName("");
         },
         (error) => {
-          showToast(error.text, "error");
+          toast({
+            description: `${error.text}  "error"`,
+            variant: "destructive",
+          });
         }
       )
       .finally(() => {
@@ -138,25 +146,6 @@ const Contact: React.FC = () => {
           </form>
         </section>
       </main>
-      {/* schacnd fucking toast */}
-      <Toast.Provider>
-        <Toast.Root
-          open={toast.open}
-          onOpenChange={(open) => setToast({ ...toast, open })}
-          className={`fixed top-4 right-4 w-[80%] max-w-[400px] px-8 py-4 rounded-md shadow-md text-white ${
-            toast.status === "success" ? "bg-green-600" : "bg-red-600"
-          }`}
-        >
-          <Toast.Title className="font-bold capitalize">
-            {toast.status === "success" ? "Success" : "Error"}
-          </Toast.Title>
-          <Toast.Description className="text-sm">
-            {toast.message}
-          </Toast.Description>
-        </Toast.Root>
-
-        <Toast.Viewport className="fixed bottom-4 right-4 z-50" />
-      </Toast.Provider>
     </>
   );
 };

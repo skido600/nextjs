@@ -3,6 +3,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+// import Mode from "./Mode";
+
 const Footer: React.FC = () => {
   return (
     <>
