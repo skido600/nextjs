@@ -1,96 +1,87 @@
 /* eslint-disable */
 import React from "react";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import { FaRegEye } from "react-icons/fa";
+import { motion } from "framer-motion";
+// import Marquee from "react-fast-marquee";
 
 interface Project {
   title: string;
   img: string;
+  description: string;
   previewLink: string;
+  languages: string[];
 }
 
 function Slider() {
   const projects: Project[] = [
     {
+      img: "/melodia.png",
       title: "Melodia",
-      img: "/assets/melo.png",
+      description:
+        "A modern music web app designed with React, Firebase, and Tailwind CSS, offering seamless streaming and personalized playlists.",
       previewLink: "https://melodialeox.vercel.app/",
-    },
-    {
-      title: "coffee landing page",
-      img: "/assets/coffe.png",
-      previewLink: "https://coffe-delta-liart.vercel.app/",
-    },
-    {
-      title: "Landing page",
-      img: "/assets/landing page.png",
-      previewLink: "https://landingpage-umber-one.vercel.app/",
-    },
-    {
-      title: "Wait List",
-      img: "/assets/screencapture-waitlist-lyart-theta-vercel-app-2025-02-10-00_50_45 Cropped (1).png",
-      previewLink: "https://waitlist-lyart-theta.vercel.app/",
+      languages: ["React", "Node.js", "MongoDB"],
     },
   ];
-
   return (
     <>
-      <main className="overflow-x-hidden mt-16 w-full overflow-hidden">
+      <main className="px-6 md:px-[4.2rem] mt-16">
         <h1 className="text-[#1E293B] text-[20px] px-6 mb-4 font-bold">
-          Some Projects I've Built
+          Featured Projects
         </h1>
-        <Marquee
-          speed={30}
-          direction="right"
-          pauseOnHover={true}
-          gradientWidth={50}
-        >
-          <article className="flex gap-3 items-center">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className={`relative group duration-300 ${
-                  index === projects.length - 1 ? "mx-5 md:mx-0" : ""
-                }`}
-              >
-                <Image
-                  src={project.img}
-                  alt={project.title}
-                  width={300}
-                  height={300}
-                  className="object-cover transform group-hover:scale-75 rounded-lg transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-4 right-0 text-white">
-                  <h3 className="text-xl font-semibold mb-2 jost">
-                    {project.title}
-                  </h3>
+
+        <article className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              key={index}
+              className="relative border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <Image
+                src={project.img}
+                alt={project.title}
+                width={400}
+                height={300}
+                className="object-cover w-full h-48 p-3 rounded-[20px]"
+              />
+
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-600 mb-4">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.languages.map((language, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                    >
+                      {language}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex justify-between items-center mt-6">
                   <a
                     href={project.previewLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-[#1E293B] rounded-[3px] transition-colors duration-300"
                   >
-                    Preview
-                    <svg
-                      className="w-4 h-4 ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
+                    <button className="flex items-center gap-2 px-4 py-2  bg-[#1E293B] text-white rounded-lg hover:opacity-90 transition-opacity">
+                      <FaRegEye className="text-lg" />
+
+                      <p>Preview</p>
+                    </button>
                   </a>
                 </div>
               </div>
-            ))}
-          </article>
-        </Marquee>
+            </motion.div>
+          ))}
+        </article>
+        {/* </Marquee> */}
       </main>
     </>
   );

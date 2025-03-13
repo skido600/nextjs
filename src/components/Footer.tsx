@@ -89,7 +89,9 @@ const Footer: React.FC = () => {
           </section>
         </footer>
 
-        <div className="text-center text-[12px]">Copyright ©2024 leowave</div>
+        <div className="text-center text-[12px]">
+          Copyright ©{new Date().getFullYear()} leowave
+        </div>
       </main>
     </>
   );

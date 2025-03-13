@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     <>
       <main>
-        <section className="pl-6 md:pl-[4.2rem] mt-8 lg:mt-8 md:mt-[4rem] flex justify-between items-center">
+        <section className="pl-6 md:pl-[4.2rem] mt-20 lg:mt-8 md:mt-[4rem] flex justify-between items-center">
           <article>
             <motion.h1
               initial="hidden"
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
               <Image
                 src="/assets/medium-shot-anime-style-man-portrait.jpg"
                 alt="leo wave leo x"
-                className="lg:w-[40%] md:w-[50%] h-[90%] relative z-[-1] lg:mt-8 md:ml-[11rem] lg:ml-[25rem] rounded-tl-[20%] rounded-br-[20%]"
+                className="lg:w-[40%] md:w-[50%] h-[90%] relative z-[-1] lg:mt-8 md:ml-[11rem] lg:ml-[25rem]  rounded-md"
                 width={600}
                 height={800}
               />

@@ -49,7 +49,12 @@ const Home = () => {
             cursor: "pointer",
           }}
         >
-          <IoMdArrowDropupCircle size={50} className="text-green-600" />
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-5 right-5 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-800 transition"
+          >
+            <IoMdArrowDropupCircle size={30} />
+          </button>
         </div>
       )}
     </>

@@ -10,7 +10,7 @@ const Nav: React.FC = () => {
   const handle = () => {
     setToggle(!toggle);
   };
-  // const = menu=["HOME","PORTFOLIO","CONTACT"]
+
   interface menudata {
     menu: string;
     Link: string;
@@ -18,7 +18,7 @@ const Nav: React.FC = () => {
 
   const menu: menudata[] = [
     { menu: "HOME", Link: "/" },
-    { menu: "PROJECTS", Link: "/projects" },
+    // { menu: "PROJECTS", Link: "/projects" },
     { menu: "  CONTACT", Link: "/contact" },
   ];
 
@@ -29,42 +29,56 @@ const Nav: React.FC = () => {
   return (
     <>
       <main>
-        <nav className="flex gap-x-4 relative z-[10] px-4 md:px-[4.2rem] justify-between py-8 border-b-[1px] border-[#EAEAEA]">
-          <div className="logo">
-            <h1>
-              Leo<span className="text-[#008134]">Wave</span>
+        <nav className="flex gap-x-4  mb-8 right-0 left-0 top-0 fixed z-[10] bg-white/50 backdrop-blur-sm px-4 md:px-[4.2rem] justify-between py-3 ">
+          <div className="">
+            <h1 className=" jost">
+              Leo <span className="text-[#008134]">Wave</span>
             </h1>
           </div>
           <div className="list text-[#7B4155]">
-            <ul className="md:flex space-x-8 text-[17px] hidden">
+            <ul className="md:flex space-x-8 text-[12px] hidden">
               {menu.map((items, index) => (
                 <Link key={index} href={items.Link} onClick={handle}>
                   <li
                     onClick={() => handleClick(index)}
-                    className={` cursor-pointer ${
+                    className={`cursor-pointer ${
                       activeIndex === index
-                        ? " grad px-4 py-1 rounded-[5px] text-white"
+                        ? "  px-4 py-1  bg-[#1e293b] rounded-[5px] text-white"
                         : ""
                     }`}
                   >
                     {items.menu}
-                    {/* {activeIndex === index && (
-                      <span className="ml-2  text-[50px]">-</span>
-                    )} */}
                   </li>
                 </Link>
               ))}
             </ul>
-            {/* mobile */}
+          </div>
+          {/* mobile */}
+
+          <div onClick={handle} className="md:hidden">
+            {toggle ? (
+              <IoClose
+                onClick={() => setToggle(!toggle)}
+                size={30}
+                className="hover:border border-gray-600"
+              />
+            ) : (
+              <IoMdMenu size={25} className="text-[#008134]" />
+            )}
+          </div>
+        </nav>
+        {toggle && (
+          <div
+            className={`fixed top-0 bottom-0 right-0 left-0 z-0  border border-red-600 text-[17px] md:hidden 
+              
+              `}
+          >
             <div
-              className={`fixed top-0 bottom-0 right-0 left-0 z-0 bg-white text-[17px] md:hidden ${
-                toggle ? "block" : "hidden"
-              }`}
-            >
-              <div onClick={handle} className="float-right m-4">
-                <IoClose size={30} className="hover:border border-gray-600" />
-              </div>
-              <ul className="py-14 space-y-8 mt-12 px-6 text-[40px]">
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setToggle(!toggle)}
+            />
+            <div className="relative bg-white z-30 min-h-screen w-[75%] ml-auto pt-8 px-4 shadow-xl">
+              <ul className="py-14 space-y-8 mt-12 px-6 text-[30px]">
                 {menu.map((items, index) => (
                   <Link
                     href={items.Link}
@@ -83,10 +97,19 @@ const Nav: React.FC = () => {
               </ul>
             </div>
           </div>
-          <div onClick={handle} className="md:hidden">
-            <IoMdMenu size={25} className="text-[#008134]" />
-          </div>
-        </nav>
+        )}
+
+        {/* <div onClick={handle} className="md:hidden">
+            {toggle ? (
+              <IoClose
+                onClick={() => setToggle(!toggle)}
+                size={30}
+                className="hover:border border-gray-600"
+              />
+            ) : (
+              <IoMdMenu size={25} className="text-[#008134]" />
+            )}
+          </div> */}
       </main>
     </>
   );
