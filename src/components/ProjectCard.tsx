@@ -48,7 +48,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             href={project.previewLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-[#1E293B] text-white rounded-lg hover:opacity-90 transition-opacity"
+            className="flex items-center gap-2 px-2 py-2 bg-[#1E293B] text-white rounded-lg hover:opacity-90 transition-opacity"
           >
             <AiFillEye className="text-lg" />
             <span>Preview</span>

@@ -18,7 +18,7 @@ const Ideal: React.FC = () => {
               {/* <Link to="/contact"> */}
 
               <Link href="#cont">
-                <button className="bg-[#018134] items-center gap-x-2 flex w-full justify-center px-4 py-4 mt-4 rounded-lg">
+                <button className="bg-[#018134] items-center drop-shadow-lg gap-x-2 flex w-full justify-center px-4 py-4 mt-4 rounded-lg">
                   <p>Get in Touch</p>
                   <FiExternalLink size={20} />
                 </button>

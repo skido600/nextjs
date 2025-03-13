@@ -50,7 +50,7 @@ function Slider() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               key={index}
-              className="relative border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="relative  border-[#D1D5DB] border  overflow-hidden shadow-sm drop-shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <figure>
                 <Image

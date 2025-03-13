@@ -102,7 +102,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 1.8 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#018134] p-2 my-4 mt-8 rounded-lg flex justify-center items-center gap-x-2 lg:w-[40%] w-[100%]"
+                className="bg-[#018134] p-2 my-4 drop-shadow-lg mt-8 rounded-lg flex justify-center items-center gap-x-2 lg:w-[40%] w-[100%]"
                 ref={pRefFour}
               >
                 <p className="text-[13px]">
