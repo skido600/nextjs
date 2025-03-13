@@ -58,7 +58,7 @@ function Slider() {
                   alt={project.title}
                   width={400}
                   height={300}
-                  className="object-cover w-full h-48 p-3 rounded-[20px]"
+                  className="object-cover w-full h-48 p-3 "
                 />
               </figure>
 
