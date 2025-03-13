@@ -93,7 +93,7 @@ export default function RootLayout({
       />
       <meta name="theme-color" content="#061417" />
       <body>
-        <header className="mb-8">
+        <header className="">
           <Nav />
         </header>
         {children}

@@ -26,7 +26,7 @@ function Slider() {
   ];
   return (
     <>
-      <main className="px-6 md:px-[4.2rem] mt-16">
+      <main className="px-6 md:px-[4.2rem] mt-16 relative z-[-10]">
         <h1 className="text-[#1E293B] text-[20px] px-6 mb-4 font-bold">
           Featured Projects
         </h1>
@@ -39,13 +39,15 @@ function Slider() {
               key={index}
               className="relative border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <Image
-                src={project.img}
-                alt={project.title}
-                width={400}
-                height={300}
-                className="object-cover w-full h-48 p-3 rounded-[20px]"
-              />
+              <figure>
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-48 p-3 rounded-[20px]"
+                />
+              </figure>
 
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">

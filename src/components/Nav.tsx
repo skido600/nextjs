@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import Link from "next/link";
@@ -21,6 +21,13 @@ const Nav: React.FC = () => {
     // { menu: "PROJECTS", Link: "/projects" },
     { menu: "  CONTACT", Link: "/contact" },
   ];
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [toggle]);
 
   const handleClick = (index: number) => {
     setActiveIndex(Number(index));
@@ -29,7 +36,7 @@ const Nav: React.FC = () => {
   return (
     <>
       <main>
-        <nav className="flex gap-x-4  mb-8 right-0 left-0 top-0 fixed z-[10] bg-white/50 backdrop-blur-sm px-4 md:px-[4.2rem] justify-between py-3 ">
+        <nav className="flex gap-x-4   right-0 left-0 top-0 fixed z-[10] bg-white/50 backdrop-blur-sm px-4 md:px-[4.2rem] justify-between py-3 ">
           <div className="">
             <h1 className=" jost">
               Leo <span className="text-[#008134]">Wave</span>
@@ -60,7 +67,7 @@ const Nav: React.FC = () => {
               <IoClose
                 onClick={() => setToggle(!toggle)}
                 size={30}
-                className="hover:border border-gray-600"
+                className=""
               />
             ) : (
               <IoMdMenu size={25} className="text-[#008134]" />
@@ -98,18 +105,6 @@ const Nav: React.FC = () => {
             </div>
           </div>
         )}
-
-        {/* <div onClick={handle} className="md:hidden">
-            {toggle ? (
-              <IoClose
-                onClick={() => setToggle(!toggle)}
-                size={30}
-                className="hover:border border-gray-600"
-              />
-            ) : (
-              <IoMdMenu size={25} className="text-[#008134]" />
-            )}
-          </div> */}
       </main>
     </>
   );

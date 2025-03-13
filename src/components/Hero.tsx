@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     <>
       <main>
-        <section className="pl-6 md:pl-[4.2rem] mt-20 lg:mt-8 md:mt-[4rem] flex justify-between items-center">
+        <section className="pl-6 md:pl-[4.2rem] mt-20 lg:mt-8 md:mt-[4rem] relative z-[-10] flex justify-between items-center">
           <article>
             <motion.h1
               initial="hidden"

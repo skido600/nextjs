@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <main>
-        <section id="cont" className="px-6 md:px-[4.2rem]">
+        <section id="cont" className="px-6 md:px-[4.2rem] mt-12 mb-4">
           <div className="text-[#1E293B]">
             <h1 className="md:text-[50px] font-[600] mb-2 md:mb-0 text-[30px] tracking-wide ">
               Contact

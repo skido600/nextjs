@@ -82,13 +82,15 @@ const Main_skill: React.FC = () => {
                 className="flex items-center mt-4 border-[#D1D5DB] border py-2 rounded-[5px] "
               >
                 <div className="bg-[#5e7a7a] mx-4 py-2 rounded-[10px]">
-                  <Image
-                    src={skill.img}
-                    alt={skill.title}
-                    width={50}
-                    height={50}
-                    className="object-contain rounded-lg mx-2"
-                  />
+                  <figure>
+                    <Image
+                      src={skill.img}
+                      alt={skill.title}
+                      width={50}
+                      height={50}
+                      className="object-contain rounded-lg mx-2"
+                    />
+                  </figure>
                 </div>
                 <div>
                   <h1 className="text-[12px] font-bold">{skill.title}</h1>

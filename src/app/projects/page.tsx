@@ -112,7 +112,7 @@ const Portfolio: React.FC = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-5 right-5 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-800 transition"
+          className="fixed bottom-5 right-5 bg-[#1E293B] text-white p-3 rounded-full shadow-lg hover:bg-indigo-800 transition"
         >
           <IoMdArrowDropupCircle size={30} />
         </button>

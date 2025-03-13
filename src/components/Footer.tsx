@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <main className="">
-        <footer className="px-6 md:grid grid-cols-1  lg:grid-cols-2 justify-between border-t border-b py-12 border-[#D1D5DB] md:px-[4.2rem] mt-18 text-[#1E293B]">
+        <footer className="px-6 md:grid grid-cols-1 mt-2 lg:grid-cols-2 justify-between border-t border-b py-12 border-[#D1D5DB] md:px-[4.2rem] mt-18 text-[#1E293B]">
           <article>
             <h1 className="md:text-[25px] text-[20px] mb-2 md:mb-0  font-bold">
               Based in Nigeria, working worldwide.
