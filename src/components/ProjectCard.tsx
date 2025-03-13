@@ -20,9 +20,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <motion.div
       variants={cardVariants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
       initial="hidden"
       animate="visible"
-      className="bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden group"
+      className="mt-8 border-[#D1D5DB] border   md:px-4 px-3 py-4 rounded-[6px]"
     >
       <div className="p-6 h-full flex flex-col">
         <div className="flex-1">

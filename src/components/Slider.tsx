@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { FaRegEye } from "react-icons/fa";
 import { motion } from "framer-motion";
-// import Marquee from "react-fast-marquee";
 
 interface Project {
   title: string;
@@ -16,18 +15,32 @@ interface Project {
 function Slider() {
   const projects: Project[] = [
     {
-      img: "/melodia.png",
+      img: "/assets/melodia.png",
       title: "Melodia",
       description:
         "A modern music web app designed with React, Firebase, and Tailwind CSS, offering seamless streaming and personalized playlists.",
       previewLink: "https://melodialeox.vercel.app/",
-      languages: ["React", "Node.js", "MongoDB"],
+      languages: ["ReactJs", "JavaScript", "TailwindCSS", "Firebase"],
+    },
+    {
+      title: "Wait List",
+      img: "/assets/waitlist.png",
+      description:
+        "A waitlist application built using Next.js, TypeScript, Firebase, and Nodemailer for email notifications.",
+      languages: [
+        "TypeScript",
+        "TailwindCSS",
+        "Next.js",
+        "Firebase",
+        "Nodemailer",
+      ],
+      previewLink: "https://waitlist-lyart-theta.vercel.app/",
     },
   ];
   return (
     <>
       <main className="px-6 md:px-[4.2rem] mt-16 relative z-[-10]">
-        <h1 className="text-[#1E293B] text-[20px] px-6 mb-4 font-bold">
+        <h1 className="text-[#1E293B] text-[20px]  font-bold">
           Featured Projects
         </h1>
 

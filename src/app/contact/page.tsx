@@ -138,7 +138,7 @@ const Contact: React.FC = () => {
             <div className="mt-2">
               <button
                 type="submit"
-                className="bg-[#018134] px-8 py-3 rounded-lg text-white"
+                className="bg-[#1E293B] px-8 py-3 rounded-lg text-white"
               >
                 {loading ? <Loader /> : "Send Message"}
               </button>
