@@ -24,7 +24,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       whileTap={{ scale: 0.95 }}
       initial="hidden"
       animate="visible"
-      className="mt-8 border-[#D1D5DB] border   md:px-4 px-3 py-4 rounded-[6px]"
+      className="mt-8 border-[#D1D5DB] border    py-4 rounded-[6px]"
     >
       <div className="p-6 h-full flex flex-col">
         <div className="flex-1">

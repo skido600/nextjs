@@ -79,7 +79,7 @@ const Main_skill: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 key={index}
-                className="flex items-center mt-4 border-[#D1D5DB] border py-2 rounded-[5px] "
+                className="flex items-center mt-4 dark:bg-[hsl(222.2, 84%, 1%)] dark:border-none border-[#D1D5DB] border py-2 rounded-[5px] "
               >
                 <div className="bg-[#5e7a7a] mx-4 py-2 rounded-[10px]">
                   <figure>

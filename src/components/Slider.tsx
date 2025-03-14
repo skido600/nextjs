@@ -39,16 +39,21 @@ function Slider() {
   ];
   return (
     <>
-      <main className="px-6 md:px-[4.2rem] mt-16 relative z-[-10]">
-        <h1 className="text-[#1E293B] text-[20px]  font-bold">
-          Featured Projects
-        </h1>
+      <main className="px-6 md:px-[4.2rem] mt-16 relative ">
+        <div className="mb-4">
+          <h1 className="text-[#1E293B] text-[20px] font-bold mb-3">
+            Featured Projects
+          </h1>
+          <p className="text-gray-600">
+            some collection of projects I've built
+          </p>
+        </div>
 
         <article className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 0.95 }}
+              whileTap={{ scale: 0.8 }}
               key={index}
               className="relative  border-[#D1D5DB] border  overflow-hidden shadow-sm drop-shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
@@ -79,19 +84,19 @@ function Slider() {
                     </span>
                   ))}
                 </div>
+
                 <div className="flex justify-between items-center mt-6">
                   <a
                     href={project.previewLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex cursor-pointer items-center gap-2 px-4 py-2 bg-[#1E293B] text-white rounded-lg hover:opacity-90 transition-opacity"
                   >
-                    <button className="flex items-center gap-2 px-4 py-2  bg-[#1E293B] text-white rounded-lg hover:opacity-90 transition-opacity">
-                      <FaRegEye className="text-lg" />
-
-                      <p>Preview</p>
-                    </button>
+                    <FaRegEye className="text-lg" />
+                    <p>Preview</p>
                   </a>
                 </div>
+                {/* </a> */}
               </div>
             </motion.div>
           ))}

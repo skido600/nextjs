@@ -7,6 +7,7 @@ import Link from "next/link";
 const Nav: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<null | number>(0);
+  // const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const handle = () => {
     setToggle(!toggle);
   };
@@ -33,17 +34,25 @@ const Nav: React.FC = () => {
     setActiveIndex(Number(index));
   };
 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 10);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
   return (
     <>
       <main>
-        <nav className="flex gap-x-4   right-0 left-0 top-0 fixed z-[10] bg-white/50 backdrop-blur-sm px-4 md:px-[4.2rem] justify-between py-3 ">
+        <nav className="flex gap-x-4   right-0 left-0 top-0 fixed z-30 bg-background/80 backdrop-blur-md shadow-sm px-4 md:px-[4.2rem] justify-between py-3 ">
           <div className="">
             <h1 className=" jost">
               Leo <span className="text-[#008134]">Wave</span>
             </h1>
           </div>
-          <div className="list text-[#7B4155]">
-            <ul className="md:flex space-x-8 text-[12px] hidden">
+          <div className="">
+            <ul className="md:flex space-x-8 items-center text-[12px] hidden">
               {menu.map((items, index) => (
                 <Link key={index} href={items.Link} onClick={handle}>
                   <li
@@ -62,21 +71,23 @@ const Nav: React.FC = () => {
           </div>
           {/* mobile */}
 
-          <div onClick={handle} className="md:hidden">
+          <div onClick={handle} className="md:hidden flex items-center">
             {toggle ? (
               <IoClose
                 onClick={() => setToggle(!toggle)}
                 size={30}
-                className=""
+                className="text-[#1e293b]"
               />
             ) : (
-              <IoMdMenu size={25} className="text-[#008134]" />
+              <IoMdMenu size={30} className="text-[#1e293b]" />
             )}
           </div>
         </nav>
         {toggle && (
           <div
-            className={`fixed top-0 bottom-0 right-0 left-0 z-0  border border-red-600 text-[17px] md:hidden 
+            className={`fixed top-0 bottom-0 right-0 left-0 z-0 ${
+              toggle && "z-10"
+            }   text-[17px] md:hidden 
               
               `}
           >

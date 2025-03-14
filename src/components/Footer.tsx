@@ -6,6 +6,7 @@ import Link from "next/link";
 // import Mode from "./Mode";
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <main className="">
@@ -90,7 +91,7 @@ const Footer: React.FC = () => {
         </footer>
 
         <div className="text-center text-[12px]">
-          Copyright ©{new Date().getFullYear()} leowave
+          Copyright ©{currentYear} leowave
         </div>
       </main>
     </>

@@ -26,7 +26,7 @@ const About = () => {
   }, [isInViewImg, isInViewPara]);
 
   return (
-    <main className="bg-[#081B29] mt-8 py-4 relative z-[-10]">
+    <main className="bg-[#081B29] dark:bg-[hsl(222.2,84%,4.9%)]  mt-8 py-4 relative z-[-10]">
       <motion.section className="px-6 md:px-[4.2rem]">
         <motion.div>
           <h1 className="text-[#1E293B]">ABOUT ME</h1>
