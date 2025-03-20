@@ -19,7 +19,7 @@ function Slider() {
       title: "Melodia",
       description:
         "A modern music web app designed with React, Firebase, and Tailwind CSS, offering seamless streaming and personalized playlists.",
-      previewLink: "https://melodialeox.vercel.app/",
+      previewLink: "https://melodialeox.vercel.app/admin",
       languages: ["ReactJs", "JavaScript", "TailwindCSS", "Firebase"],
     },
     {
@@ -35,6 +35,14 @@ function Slider() {
         "Nodemailer",
       ],
       previewLink: "https://waitlist-lyart-theta.vercel.app/",
+    },
+    {
+      title: "CoreLink",
+      img: "/assets/core.png",
+      description:
+        "CoreLink is a powerful product management platform designed to help admins effortlessly manage, update, and share product information. With features like real-time price and discount updates, dynamic link sharing, and an intuitive admin dashboard, CoreLink streamlines product management for businesses of all sizes. Built with modern technologies, it ensures a seamless and secure experience for both admins and end-users.",
+      languages: ["TypeScript", "TailwindCSS", "Next.js", "Firebase"],
+      previewLink: "https://core-link.vercel.app/admin",
     },
   ];
   return (
@@ -52,10 +60,13 @@ function Slider() {
         <article className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
-              whileHover={{ scale: 0.95 }}
-              whileTap={{ scale: 0.8 }}
+              // whileHover={{
+              //   scale: 1.2,
+              //   transition: { duration: 1 },
+              // }}
+              // whileTap={{ scale: 0.9 }}
               key={index}
-              className="relative  border-[#D1D5DB] border  overflow-hidden shadow-sm drop-shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="relative  border-[#D1D5DB] border  overflow-hidden shadow-sm  hover:shadow-xl transition-shadow duration-300"
             >
               <figure>
                 <Image
@@ -63,7 +74,7 @@ function Slider() {
                   alt={project.title}
                   width={400}
                   height={300}
-                  className="object-cover w-full h-48 p-3 "
+                  className="object-cover w-full h-48 p-3  drop-shadow-sm"
                 />
               </figure>
 
