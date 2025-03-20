@@ -40,9 +40,9 @@ function Slider() {
       title: "CoreLink",
       img: "/assets/core.png",
       description:
-        "CoreLink is a powerful product management platform designed to help admins effortlessly manage, update, and share product information. With features like real-time price and discount updates, dynamic link sharing, and an intuitive admin dashboard, CoreLink streamlines product management for businesses of all sizes. Built with modern technologies, it ensures a seamless and secure experience for both admins and end-users.",
+        "CoreLink is a product management platform for admins to update and share product details like prices and discounts. It features real-time updates, dynamic link sharing, and an intuitive dashboard. Built with modern tech for seamless performance.",
       languages: ["TypeScript", "TailwindCSS", "Next.js", "Firebase"],
-      previewLink: "https://core-link.vercel.app/admin",
+      previewLink: "https://waitlist-lyart-theta.vercel.app/",
     },
   ];
   return (
